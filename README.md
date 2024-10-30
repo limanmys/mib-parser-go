@@ -11,7 +11,7 @@ There must be required mib files in the specified path <br/>
 ### Installation
 
 ```
-go get github.com/KadirOzerOzturk/mibparser
+go get github.com/limanmys/mib-parser-go
 ```
 
 ### Usage
@@ -23,7 +23,7 @@ import (
     "fmt"
     "log"
 
-    "github.com/KadirOzerOzturk/mibparser"
+    "github.com/limanmys/mib-parser-go"
 )
 
 func main() {
