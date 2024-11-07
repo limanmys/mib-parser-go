@@ -170,7 +170,7 @@ func parseMIB(lines []string) ([]OIDNode, error) {
 						description = strings.TrimSpace(strings.ReplaceAll(description, "DESCRIPTION", ""))
 					}
 				}
-				if !strings.Contains(name, "OBJECT-TYPE") && !strings.Contains(name, "--") {
+				if !strings.Contains(name, "OBJECT-TYPE") && !strings.Contains(name, "--") && !strings.Contains(name, "OBJECT-IDENTITY") && !strings.Contains(line, "MODULE-IDENTITY") {
 					parentParts := strings.Split(parent, " ")
 					if len(parentParts) >= 2 {
 						nodes = append(nodes, OIDNode{
