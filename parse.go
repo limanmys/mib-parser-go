@@ -167,7 +167,10 @@ func parseMIB(lines []string) ([]OIDNode, error) {
 							}
 							descriptionLine += " " + strings.TrimSpace(lines[k])
 						}
-						description = strings.TrimSpace(strings.ReplaceAll(description, "DESCRIPTION", ""))
+						description := strings.TrimSpace(strings.ReplaceAll(descriptionLine, "DESCRIPTION", ""))
+						fmt.Println("desc line:", descriptionLine)
+						fmt.Println("desc:", description)
+
 					}
 				}
 				if !strings.Contains(name, "OBJECT-TYPE") && !strings.Contains(name, "--") {
